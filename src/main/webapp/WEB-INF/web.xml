@@ -32,7 +32,7 @@
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>default</servlet-name>
-    <url-pattern>/js/*</url-pattern>
+    <url-pattern>*.js</url-pattern>
   </servlet-mapping>
   <mime-mapping>
     <extension>js</extension>
