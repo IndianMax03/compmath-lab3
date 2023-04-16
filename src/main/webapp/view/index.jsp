@@ -136,8 +136,8 @@
                     <div class="select is-info my-6">
                         <select id="method">
                             <option id="leftRectangle" value="LeftRectangle">Left Rectangle</option>
-                            <option id="rightRectangle" value="Right Rectangle">Right Rectangle</option>
-                            <option id="middleRectangle" value="Middle Rectangle">Middle Rectangle</option>
+                            <option id="rightRectangle" value="RightRectangle">Right Rectangle</option>
+                            <option id="middleRectangle" value="MiddleRectangle">Middle Rectangle</option>
                             <option id="trapeze" value="Trapeze">Trapeze</option>
                             <option id="simpson" value="Simpson">Simpson</option>
                         </select>

@@ -47,7 +47,7 @@ submitButton.addEventListener("click", (evt) => {
         a: aStr.replaceAll(",", "."),
         b: bStr.replaceAll(",", "."),
         eps: epsStr.replaceAll(",", "."),
-        graphic: sincosButton ? "sincos" : epiButton ? "epi" : moduleButton ? "module" : null,
+        equation: sincosButton ? "sincos" : epiButton ? "epi" : moduleButton ? "module" : null,
         method: selectedMethod,
     };
 
@@ -57,15 +57,15 @@ submitButton.addEventListener("click", (evt) => {
 
     $.ajax({
         type: "POST",
-        url: "equations/solveNonLinear",
+        url: "equations/solveNormal",
         data: JSON.stringify(data),
         contentType: "application/json",
         dataType: "json",
         success: function (result) {
             if (result.error !== undefined) {
-                answerToUser.value = result.error;
+                ansTableBody.innerHTML = result.error;
             } else {
-                console.log(result)
+                ansTableBody.innerHTML = result.result;
                 // if (result.x === undefined || result['f(x)'] === undefined || result.iterations === undefined) {
                 //     answerToUser.value = "Сервер ответил неожиданными данными..."
                 //     return;
@@ -74,7 +74,7 @@ submitButton.addEventListener("click", (evt) => {
             }
         },
         error: function (xhr, status, error) {
-            answerToUser.innerText = "Упс! Ошибочка. " + error;
+            ansTableBody.innerText = "Упс! Ошибочка. " + error;
         }
     })
 
