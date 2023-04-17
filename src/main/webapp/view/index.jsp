@@ -13,15 +13,18 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma-rtl.min.css">
     <style>
         body {
-            background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,154,0,1) 10%, rgba(208,222,33,1) 20%, rgba(79,220,74,1) 30%, rgba(63,218,216,1) 40%, rgba(47,201,226,1) 50%, rgba(28,127,238,1) 60%, rgba(95,21,242,1) 70%, rgba(186,12,248,1) 80%, rgba(251,7,217,1) 90%, rgba(255,0,0,1) 100%);
+            background: linear-gradient(90deg, rgba(255, 0, 0, 1) 0%, rgba(255, 154, 0, 1) 10%, rgba(208, 222, 33, 1) 20%, rgba(79, 220, 74, 1) 30%, rgba(63, 218, 216, 1) 40%, rgba(47, 201, 226, 1) 50%, rgba(28, 127, 238, 1) 60%, rgba(95, 21, 242, 1) 70%, rgba(186, 12, 248, 1) 80%, rgba(251, 7, 217, 1) 90%, rgba(255, 0, 0, 1) 100%);
             height: 150vh;
         }
+
         * {
             font-family: 'Gloria Hallelujah', sans-serif !important;
         }
+
         input[type=radio] {
             accent-color: black;
         }
+
         .katex {
             font-family: 'Gloria Hallelujah', sans-serif;
             font-size: 26px !important;
@@ -49,8 +52,8 @@
 
                     <div class="my-5">
                         <label class="radio">
-                        <input type="radio" id="sincosButton" name="equation" checked class="mr-4">
-                        <span id="sincosLabel"></span>
+                            <input type="radio" id="sincosButton" name="equation" checked class="mr-4">
+                            <span id="sincosLabel"></span>
                         </label>
                     </div>
 
@@ -95,7 +98,8 @@
                 <span style="background: blue;">3.EPS >= 0</span>
                 <br>
                 <div class="has-text-right mt-1">
-                    <img style="transform: scale(-1, 1);" height="150" width="150px" src="https://kaifolog.ru/uploads/posts/2015-09/1443418043_014.jpg">
+                    <img style="transform: scale(-1, 1);" height="150" width="150px"
+                         src="https://kaifolog.ru/uploads/posts/2015-09/1443418043_014.jpg">
                     <progress class="progress is-small is-warning" max="100">15%</progress>
                 </div>
             </div>
@@ -163,7 +167,8 @@
             </div>
         </div>
         <div class="column is-3">
-            <img height="220px" width="220px" src="https://media.tenor.com/IqWW1a8gE9oAAAAC/%D0%BF%D0%BE%D0%BD-%D0%BA%D0%BE%D1%82.gif">
+            <img height="220px" width="220px"
+                 src="https://media.tenor.com/IqWW1a8gE9oAAAAC/%D0%BF%D0%BE%D0%BD-%D0%BA%D0%BE%D1%82.gif">
         </div>
     </div>
 
@@ -195,7 +200,8 @@
         </div>
 
         <div class="column is-3 has-text-centered">
-            <img height="220px" width="220px" src="https://i.gifer.com/origin/a4/a488a8af497a4043981768348e98da07_w200.gif">
+            <img height="220px" width="220px"
+                 src="https://i.gifer.com/origin/a4/a488a8af497a4043981768348e98da07_w200.gif">
         </div>
     </div>
 </section>

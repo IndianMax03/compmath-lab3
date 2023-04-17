@@ -6,6 +6,6 @@ public class Hyper extends Function {
 
     @Override
     public double func(double x) {
-        return 1/x;
+        return 1 / x;
     }
 }

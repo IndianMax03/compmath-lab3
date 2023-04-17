@@ -37,13 +37,13 @@ public class Simpson extends EquationMethod {
                 }
 
             }
-            curIntegralValue = step/3 * curIntegralValue;
+            curIntegralValue = step / 3 * curIntegralValue;
             nList.add(n);
             integralList.add(curIntegralValue);
-            epsList.add(Math.abs(curIntegralValue - prevIntegralValue)/3);
+            epsList.add(Math.abs(curIntegralValue - prevIntegralValue) / 3);
             n = n * 2;
             iteration++;
-        } while (Math.abs(curIntegralValue - prevIntegralValue)/15  > eps && iteration != MAX_ITERATION);
+        } while (Math.abs(curIntegralValue - prevIntegralValue) / 15 > eps && iteration != MAX_ITERATION);
 
         if (iteration != MAX_ITERATION) {
             node.put("success", "true");

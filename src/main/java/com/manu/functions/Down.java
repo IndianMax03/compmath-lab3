@@ -6,6 +6,6 @@ public class Down extends Function {
 
     @Override
     public double func(double x) {
-        return 1/(-x*x + 4*x - 4);
+        return 1 / (-x * x + 4 * x - 4);
     }
 }

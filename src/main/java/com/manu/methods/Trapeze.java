@@ -28,14 +28,14 @@ public class Trapeze extends EquationMethod {
             double step = (b - a) / n;
 
             for (int i = 0; i < n; i++) {
-                curIntegralValue += (function.func(a + step * i) + function.func(a + step * (i + 1)))/2*step;
+                curIntegralValue += (function.func(a + step * i) + function.func(a + step * (i + 1))) / 2 * step;
             }
             nList.add(n);
             integralList.add(curIntegralValue);
-            epsList.add(Math.abs(curIntegralValue - prevIntegralValue)/3);
+            epsList.add(Math.abs(curIntegralValue - prevIntegralValue) / 3);
             n = n * 2;
             iteration++;
-        } while (Math.abs(curIntegralValue - prevIntegralValue)/3  > eps && iteration != MAX_ITERATION);
+        } while (Math.abs(curIntegralValue - prevIntegralValue) / 3 > eps && iteration != MAX_ITERATION);
 
         if (iteration != MAX_ITERATION) {
             node.put("success", "true");
