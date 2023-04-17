@@ -16,6 +16,11 @@ public class EquationService {
             return node;
         }
 
+        if (!EquationsValidator.formatData(data)) {
+            node.put("error", "The integral does not exist");
+            return node;
+        }
+
         return data.solveEquation();
     }
 

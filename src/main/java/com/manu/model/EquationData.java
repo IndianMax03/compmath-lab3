@@ -97,6 +97,22 @@ public class EquationData {
         this.method = method;
     }
 
+    public double getValidA() {
+        return validA;
+    }
+
+    public void setValidA(double validA) {
+        this.validA = validA;
+    }
+
+    public double getValidB() {
+        return validB;
+    }
+
+    public void setValidB(double validB) {
+        this.validB = validB;
+    }
+
     @Override
     public String toString() {
         return "EquationData{" +

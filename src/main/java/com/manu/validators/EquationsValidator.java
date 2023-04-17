@@ -1,9 +1,7 @@
 package com.manu.validators;
 
-import com.manu.functions.Epi;
-import com.manu.functions.Function;
+import com.manu.functions.*;
 import com.manu.functions.Module;
-import com.manu.functions.SinCos;
 import com.manu.methods.*;
 import com.manu.model.EquationData;
 
@@ -18,6 +16,8 @@ public class EquationsValidator {
         functions.put("sincos", new SinCos());
         functions.put("epi", new Epi());
         functions.put("module", new Module());
+        functions.put("hyper", new Hyper());
+        functions.put("down", new Down());
 
         methods.put("LeftRectangle", new LeftRectangle());
         methods.put("MiddleRectangle", new MiddleRectangle());
@@ -37,6 +37,34 @@ public class EquationsValidator {
 
         } catch (NumberFormatException ex) {
             return false;
+        }
+        return true;
+    }
+
+    public static boolean formatData(EquationData data) {
+        double a = data.getValidA();
+        double b = data.getValidB();
+        switch (data.getEquation()) {
+            case "hyper":
+                if (a == Hyper.BREAKING_POINT || b == Hyper.BREAKING_POINT) {
+                    return false;
+                }
+                if (a > Hyper.BREAKING_POINT || b < Hyper.BREAKING_POINT) {
+                    return true;
+                }
+                if (Math.abs(b) >= Math.abs(a)) {
+                    data.setValidA(-a);
+                } else {
+                    data.setValidB(-b);
+                }
+                break;
+            case "down":
+                if (a == Down.BREAKING_POINT || b == Down.BREAKING_POINT) {
+                    return false;
+                }
+                return a > Down.BREAKING_POINT || b < Down.BREAKING_POINT;
+            default:
+                break;
         }
         return true;
     }

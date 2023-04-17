@@ -16,6 +16,8 @@ submitButton.addEventListener("click", (evt) => {
     let sincosButton = document.getElementById("sincosButton").checked;
     let epiButton = document.getElementById("epiButton").checked;
     let moduleButton = document.getElementById("moduleButton").checked;
+    let hyperButton = document.getElementById("hyperButton").checked;
+    let downButton = document.getElementById("downButton").checked;
     let selectedMethod = document.querySelector("#method").value;
 
     let a = aStr !== "" ? Number(aStr.replaceAll(",", ".")) : NaN;
@@ -47,7 +49,7 @@ submitButton.addEventListener("click", (evt) => {
         a: aStr.replaceAll(",", "."),
         b: bStr.replaceAll(",", "."),
         eps: epsStr.replaceAll(",", "."),
-        equation: sincosButton ? "sincos" : epiButton ? "epi" : moduleButton ? "module" : null,
+        equation: sincosButton ? "sincos" : epiButton ? "epi" : moduleButton ? "module" : hyperButton ? "hyper" : downButton ? "down" : null,
         method: selectedMethod,
     };
 
@@ -63,7 +65,8 @@ submitButton.addEventListener("click", (evt) => {
         dataType: "json",
         success: function (result) {
             if (result.error !== undefined) {
-                ansTableBody.innerHTML = result.error;
+                ansTableBody.style.color = "red"
+                ansTableBody.innerHTML = `<tr><td colSpan='4'><h1>Error: ${result.error}</h1></td></tr>`
             } else {
                 let n = Array.from(result['n']);
                 let I = Array.from(result['I']);
