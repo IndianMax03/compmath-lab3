@@ -35,6 +35,9 @@ public class LeftRectangle extends EquationMethod {
             epsList.add(Math.abs(curIntegralValue - prevIntegralValue) / 3);
             n = n * 2;
             iteration++;
+            if (Double.isInfinite(curIntegralValue) || Double.isNaN(Math.abs(curIntegralValue - prevIntegralValue))) {
+                node.put("error", "Integral value too large");
+            }
         } while (Math.abs(curIntegralValue - prevIntegralValue) > eps && iteration != MAX_ITERATION);
 
         if (iteration != MAX_ITERATION) {

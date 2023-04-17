@@ -143,7 +143,11 @@
 <section>
     <div class="columns is-vcentered is-flex is-align-items-center has-text-centered">
         <div class="column is-3">
-            <img height="220px" width="220px" src="https://bestgif.su/_ph/46/2/620089982.gif">
+            <a href="https://www.wolframalpha.com/input?i2d=true&i=Integrate%5Bsin%5C%2840%29cos%5C%2840%29sin%5C%2840%29x%5C%2841%29%5C%2841%29%5C%2841%29%2C%7Bx%2C-6%2C40%7D%5D">
+                <img id="catch" height="220px" width="220px" src="https://bestgif.su/_ph/46/2/620089982.gif">
+            </a>
+            <br>
+            <span>Check the first</span>
         </div>
         <div class="column is-6">
             <div class="is-square is-fullheight-with-navbar">
@@ -167,8 +171,12 @@
             </div>
         </div>
         <div class="column is-3">
-            <img height="220px" width="220px"
-                 src="https://media.tenor.com/IqWW1a8gE9oAAAAC/%D0%BF%D0%BE%D0%BD-%D0%BA%D0%BE%D1%82.gif">
+            <a href="https://www.wolframalpha.com/input?i2d=true&i=Integrate%5B%5C%2840%29Power%5Bpi%2Csin%5C%2840%29-xcos%5C%2840%29x%5C%2841%29%5C%2841%29%5D%2BDivide%5BPower%5Be%2Cpi%5D-100pi%2C300%5D%5C%2841%29%2C%7Bx%2C-6%2C20%7D%5D">
+                <img id="pon" height="220px" width="220px"
+                     src="https://media.tenor.com/IqWW1a8gE9oAAAAC/%D0%BF%D0%BE%D0%BD-%D0%BA%D0%BE%D1%82.gif">
+            </a>
+            <br>
+            <span>Check the second</span>
         </div>
     </div>
 
@@ -178,8 +186,11 @@
 <section>
     <div class="columns is-vcentered is-align-items-center has-text-centered">
         <div class="column is-3 has-text-centered">
-            <img height="220px" width="220px" src="https://apikabu.ru/img/NzMzNW.gif">
-
+            <a href="https://www.wolframalpha.com/input?i2d=true&i=Integrate%5B%5C%2840%29%7CDivide%5BPower%5Bx%2C5%5D%2C3%5D%7C+-+2Power%5Bx%2C2%5D+-+%7C2x%7C%5C%2841%29%2C%7Bx%2C-10%2C2%7D%5D">
+                <img id="shoes" height="220px" width="220px" src="https://apikabu.ru/img/NzMzNW.gif">
+            </a>
+            <br>
+            <span>Check the third</span>
         </div>
 
         <div class="column is-6 has-text-centered">
@@ -200,8 +211,12 @@
         </div>
 
         <div class="column is-3 has-text-centered">
-            <img height="220px" width="220px"
-                 src="https://i.gifer.com/origin/a4/a488a8af497a4043981768348e98da07_w200.gif">
+            <a href="https://www.integral-calculator.ru/">
+                <img id="dance" height="220px" width="220px"
+                     src="https://i.gifer.com/origin/a4/a488a8af497a4043981768348e98da07_w200.gif">
+            </a>
+            <br>
+            <span>Online solver</span>
         </div>
     </div>
 </section>
