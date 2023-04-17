@@ -168,17 +168,13 @@
                 <table class="table is-bordered has-text-centered" style="margin: auto">
                     <thead>
                     <tr>
+                        <td><abbr id="iterTable" title="Number of iterations"></abbr></td>
                         <td><abbr id="nTable" title="Number of gaps"></abbr></td>
                         <td><abbr id="iTable" title="Integral value"></abbr></td>
                         <td><abbr id="epsTable" title="Measurement error"></abbr></td>
                     </tr>
                     </thead>
-                    <tbody id="ansTableBody">
-                    <tr>
-                        <td>1232332</td>
-                        <td>+3223232332</td>
-                        <td>81123123123123</td>
-                    </tr>
+                    <tbody id="ansTableBody" class="has-text-centered is-centered is-center">
                     </tbody>
                 </table>
             </div>

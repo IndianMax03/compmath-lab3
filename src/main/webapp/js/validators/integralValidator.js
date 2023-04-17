@@ -51,10 +51,10 @@ submitButton.addEventListener("click", (evt) => {
         method: selectedMethod,
     };
 
-    console.log("OK!")
-
     let ansTableBody = document.getElementById("ansTableBody");
-
+    ansTableBody.innerHTML = ""
+    ansTableBody.innerHTML = "<tr><td colspan='4'><h1>Let's wait...</h1><br><progress class=\"progress is-small is-info\" max=\"10\">15%</progress></td></tr>";
+    ansTableBody.style.color = "blue"
     $.ajax({
         type: "POST",
         url: "equations/solveNormal",
@@ -65,16 +65,29 @@ submitButton.addEventListener("click", (evt) => {
             if (result.error !== undefined) {
                 ansTableBody.innerHTML = result.error;
             } else {
-                ansTableBody.innerHTML = result.result;
-                // if (result.x === undefined || result['f(x)'] === undefined || result.iterations === undefined) {
-                //     answerToUser.value = "Сервер ответил неожиданными данными..."
-                //     return;
-                // }
-                // answerToUser.value = `x = ${result.x}\nf(x) = ${result['f(x)']}\niterations = ${result.iterations}`;
+                let n = Array.from(result['n']);
+                let I = Array.from(result['I']);
+                let eps = Array.from(result['eps'])
+                let success = result['success']
+
+                if (n === undefined || I === undefined || eps === undefined || success === undefined) {
+                    ansTableBody.innerHTML = `<tr><td colspan='4'><h1>Server is dead inside</h1></td></tr>`;
+                    return;
+                }
+
+                ansTableBody.innerHTML = "";
+
+                for (let i = 0; i < n.length; i++) {
+                    ansTableBody.innerHTML += `<tr><td>${i}</td><td>${n[i]}</td><td>${I[i]}</td><td>${eps[i]}</td></tr>`
+                }
+
+                ansTableBody.style.color = success === "true" ? "green" : "red"
+
             }
         },
         error: function (xhr, status, error) {
-            ansTableBody.innerText = "Упс! Ошибочка. " + error;
+            ansTableBody.style.color = "red";
+            ansTableBody.innerText = "Try again... " + error;
         }
     })
 

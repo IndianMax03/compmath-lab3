@@ -4,10 +4,9 @@ const sincosLabel = document.getElementById('sincosLabel');
 const epiLabel = document.getElementById('epiLabel');
 const moduleLabel = document.getElementById('moduleLabel');
 
+const iterTable = document.getElementById('iterTable');
 const nTable = document.getElementById('nTable');
-
 const iTable = document.getElementById('iTable');
-
 const epsTable = document.getElementById('epsTable');
 
 katex.render(
@@ -38,4 +37,9 @@ katex.render(
 katex.render(
     "eps_i",
     epsTable
+)
+
+katex.render(
+    "i",
+    iterTable
 )
